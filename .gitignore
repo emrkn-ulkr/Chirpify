@@ -1,1 +1,18 @@
+# Node.js & React projeleri için temel .gitignore
+
+# Node.js dependencies
 node_modules
+
+# Build çıktıları
+dist
+build
+
+# Log dosyaları
+*.log
+
+# Sistem dosyaları
+.DS_Store
+
+# IDE dosyaları
+.vscode/
+.idea/
