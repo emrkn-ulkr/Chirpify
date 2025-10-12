@@ -1,8 +1,11 @@
-import * as React from "react";
 import { styled } from "@mui/material/styles";
 import Switch from "@mui/material/Switch";
 import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
+import Button from '@mui/material/Button';
+import { blue } from "@mui/material/colors";
+import Avatar from '@mui/material/Avatar';
+
 
 // 🟡 Top sarı, 🔵 arka plan mavi
 
@@ -62,14 +65,78 @@ function Header() {
       <br />
 
       <div className="header-bar-div">
-        <div>Profil İconu</div>
+        <Avatar sx={{ backgroundColor: "#ede7f6", color: "#9575cd", transform: "rotate(30deg)" }}>
+          A
+        </Avatar>
 
         <div className="header-bar-right">
-          <div>Skills</div>
-          <div>Projects</div>
-          <div>Hire Me</div>
+          <Button sx={{ color: "gray", textTransform: "none" }} variant="text" >Skills</Button>
+          <Button sx={{ color: "gray", textTransform: "none" }} variant="text" >Projects</Button>
+          <Button
+            variant="outlined"
+            sx={{
+              color: blue[900],       // yazı rengi
+              borderColor: blue[900], // çerçeve rengi
+              textTransform: "none"   // büyük harfi kaldırmak için
+            }}
+          >
+            Hire Me
+          </Button>
+        </div>
+      </div>
+
+      <div>
+        <div className="header-hero-left" >
+
+          <div style={{ display: "flex", flexDirection: "row" }}>
+
+            <hr style={{ width: "100px", marginTop: "15px", marginRight: "10px", color: "blue" }} />
+            <h5 style={{ color: "darkblue" }}>Emirkan Ülker</h5>
+
+          </div>
+
+
+          <Typography variant="h2" sx={{ fontSize: "2.5rem", fontWeight: "bold", color: "black", mt: 1 }}>
+            Cretive thinker<br /> Minimalism lover
+          </Typography>
+          <Typography sx={{ color: "gray" }}>
+            Hi, I'm Emirkan. I'm a full-stack developer. If you are looking for a <br />
+            Developer who to craft solid and scalable frontend products with <br />
+            great user experiences. Let's shake hands with me.
+          </Typography>
+
+          <div style={{ display: "flex", gap: "10px" }}>
+            <Button
+              sx={{
+                textTransform: "none ",
+                backgroundColor: blue[900]
+              }}
+              variant="contained">
+              Hire Me</Button>
+
+            <Button
+              variant="outlined"
+              sx={{
+                color: blue[900],       // yazı rengi
+                borderColor: blue[900], // çerçeve rengi
+                textTransform: "none"   // büyük harfi kaldırmak için
+              }}
+            >Github</Button>
+
+            <Button
+              variant="outlined"
+              sx={{
+                color: blue[900],       // yazı rengi
+                borderColor: blue[900], // çerçeve rengi
+                textTransform: "none"   // büyük harfi kaldırmak için
+              }}
+            >Linkedin</Button>
+
+          </div>
+
         </div>
 
+        <div className="header-hero-right">right</div>
       </div>
 
     </div>
