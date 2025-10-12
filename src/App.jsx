@@ -1,5 +1,4 @@
 import Header from "./components/Header";
-import Hero from "./components/Hero";
 import Skills from "./components/Skills";
 import Profile from "./components/Profile";
 import Projects from "./components/Projects";
@@ -9,18 +8,17 @@ function App() {
 
 
   return (
-    <div className="bg-white text-gray-800 font-sans">
-      <Header/>
-      <Hero/>
-      <Skills/>
-      <Profile/>
-      <Projects/>
-      <Footer/>
-      <div class="text-5xl font-bold text-blue-500"> 
 
-      </div>
-    </div>
-    
+   <div class="grid grid-rows-5 h-screen">
+
+  <div class="bg-red-50"><Header/></div>
+  <div class="bg-green-500"> <Skills/></div>
+  <div class="bg-blue-500"><Profile/></div>
+  <div class="bg-yellow-500"><Projects/></div>
+  <div class="bg-purple-500"><Footer/></div>
+   
+   </div>
+  
   )
 }
 
