@@ -1,1 +1,23 @@
 @import "tailwindcss";
+
+.app-general-div {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.header-header {
+    float: right;
+}
+
+.header-bar-div {
+    display: flex;
+    justify-content: space-between;
+    gap: 250px;
+}
+
+.header-bar-right {
+    display: flex;
+    gap: 100px;
+}
