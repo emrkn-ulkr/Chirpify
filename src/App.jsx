@@ -1,11 +1,13 @@
 
+
 function App() {
 
 
   return (
-    <>
-
-    </>
+    <div>
+      <Header />
+      <Skills />
+    </div>
   )
 }
 

@@ -1,11 +1,11 @@
 import React from 'react'
 
-function header() {
+function Skills() {
     return (
         <div>
-            HEADER
+            SKILLS
         </div>
     )
 }
 
-export default header
+export default Skills

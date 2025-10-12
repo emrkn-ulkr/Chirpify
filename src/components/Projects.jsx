@@ -1,11 +1,11 @@
 import React from 'react'
 
-function header() {
+function Projects() {
     return (
         <div>
-            HEADER
+            PROJECTS
         </div>
     )
 }
 
-export default header
+export default Projects
