@@ -2,7 +2,7 @@ import React from 'react'
 
 function header() {
     return (
-        <div>
+        <div className='text-9xl'>
             HEADER
         </div>
     )
