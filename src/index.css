@@ -17,9 +17,14 @@
     display: flex;
     justify-content: space-between;
     gap: 250px;
+    margin-top: 20px;
 }
 
 .header-bar-right {
     display: flex;
-    gap: 100px;
+    gap: 25px;
+}
+
+.header-hero-general {
+    display: flex;
 }

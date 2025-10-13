@@ -5,6 +5,10 @@ import Stack from "@mui/material/Stack";
 import Button from '@mui/material/Button';
 import { blue } from "@mui/material/colors";
 import Avatar from '@mui/material/Avatar';
+import ProfileImages from "../images/profile.jpg"
+import { FaGithub } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa";
+
 
 
 // 🟡 Top sarı, 🔵 arka plan mavi
@@ -56,90 +60,143 @@ function Header() {
   return (
     <div>
 
-      <div className="header-header">
-        <Stack direction="row" spacing={1} alignItems="center">
-          <YellowBlueSwitch defaultChecked />
-          <Typography>DARK MODE | <span className="text-blue-800">TÜRKÇE</span>'YE GEÇ </Typography>
-        </Stack>
+      <div className="header-div">
+
+
+
+        <div className="header-header">
+          <Stack direction="row" spacing={1} alignItems="center">
+            <YellowBlueSwitch defaultChecked />
+            <Typography>DARK MODE | <span className="text-blue-800">TÜRKÇE</span>'YE GEÇ </Typography>
+          </Stack>
+        </div>
+        <br />
+
+        <div className="header-bar-div">
+          <Avatar sx={{ backgroundColor: "#ede7f6", color: "#9575cd", transform: "rotate(30deg)", width: "45px", height: "45px" }}>
+            A
+          </Avatar>
+          <br />
+          <br />
+          <br />
+
+          <div className="header-bar-right">
+            <Button sx={{
+              color: "gray",
+              textTransform: "none",
+              height: "50px",
+              width: "120px"
+            }} variant="text" >Skills</Button>
+
+            <Button sx={{
+              color: "gray",
+              textTransform: "none",
+              height: "50px",
+              width: "120px"
+            }} variant="text" >Projects</Button>
+
+            <Button
+              variant="outlined"
+              sx={{
+                color: blue[900],       // yazı rengi
+                borderColor: blue[900], // çerçeve rengi
+                textTransform: "none",
+                height: "50px",
+                width: "120px"  // büyük harfi kaldırmak için
+              }}
+            >Hire Me</Button>
+          </div>
+        </div>
+
+        <div className="header-hero-general">
+
+          <div className="header-hero-left" >
+
+            <div style={{ display: "flex", flexDirection: "row" }}>
+
+              <hr style={{ width: "100px", marginTop: "15px", marginRight: "10px", color: "blue" }} />
+              <h5 style={{ color: "darkblue" }}>Emirkan Ülker</h5>
+              <br />
+            </div>
+
+
+            <Typography variant="h2" sx={{ fontSize: "2.5rem", fontWeight: "bold", color: "black", mt: 1 }}>
+              Cretive thinker<br /> Minimalism lover
+            </Typography>
+            <Typography sx={{ color: "gray" }}>
+              Hi, I'm Emirkan. I'm a full-stack developer. If you are looking for a <br />
+              Developer who to craft solid and scalable frontend products with <br />
+              great user experiences. Let's shake hands with me.
+            </Typography>
+            <br />
+            <div style={{ display: "flex", gap: "10px" }}>
+              <Button
+                sx={{
+                  textTransform: "none ",
+                  backgroundColor: blue[900],
+                  width: "115px"
+                }}
+                variant="contained">
+                Hire Me</Button>
+
+              <Button
+                variant="outlined"
+                sx={{
+                  color: blue[900],       // yazı rengi
+                  borderColor: blue[900], // çerçeve rengi
+                  textTransform: "none",
+                  width: "115px",
+                  gap: "5px"
+
+                }}
+
+              ><span><FaGithub style={{ display: "flex", fontSize: "30px" }} /></span>  Github</Button>
+
+              <Button
+                variant="outlined"
+                sx={{
+                  width: "115px",
+                  color: blue[900],
+                  borderColor: blue[900],
+                  textTransform: "none",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  gap: "5px",
+                  padding: "6px 14px", // buton iç boşluğu
+                }}
+              >
+                <span style={{ display: "flex", fontSize: "30px" }}>
+                  <FaLinkedinIn />
+                </span>
+                Linkedin
+              </Button>
+
+            </div>
+
+          </div>
+
+          <div className="header-hero-right">
+            <Avatar
+              alt="Emirkan Ülker"
+              src={ProfileImages}
+              sx={{
+                marginTop: "25px",
+                marginLeft: "150px",
+                width: 380,          // genişlik
+                height: 300,         // yükseklik
+                borderRadius: "10%", // kareye yakın görünüm
+                boxShadow: "0 4px 10px rgba(0,0,0,0.2)",
+              }} />
+          </div>
+        </div>
       </div>
       <br />
-
-      <div className="header-bar-div">
-        <Avatar sx={{ backgroundColor: "#ede7f6", color: "#9575cd", transform: "rotate(30deg)" }}>
-          A
-        </Avatar>
-
-        <div className="header-bar-right">
-          <Button sx={{ color: "gray", textTransform: "none" }} variant="text" >Skills</Button>
-          <Button sx={{ color: "gray", textTransform: "none" }} variant="text" >Projects</Button>
-          <Button
-            variant="outlined"
-            sx={{
-              color: blue[900],       // yazı rengi
-              borderColor: blue[900], // çerçeve rengi
-              textTransform: "none"   // büyük harfi kaldırmak için
-            }}
-          >
-            Hire Me
-          </Button>
-        </div>
-      </div>
-
-      <div>
-        <div className="header-hero-left" >
-
-          <div style={{ display: "flex", flexDirection: "row" }}>
-
-            <hr style={{ width: "100px", marginTop: "15px", marginRight: "10px", color: "blue" }} />
-            <h5 style={{ color: "darkblue" }}>Emirkan Ülker</h5>
-
-          </div>
+      <br />
+      <br />
 
 
-          <Typography variant="h2" sx={{ fontSize: "2.5rem", fontWeight: "bold", color: "black", mt: 1 }}>
-            Cretive thinker<br /> Minimalism lover
-          </Typography>
-          <Typography sx={{ color: "gray" }}>
-            Hi, I'm Emirkan. I'm a full-stack developer. If you are looking for a <br />
-            Developer who to craft solid and scalable frontend products with <br />
-            great user experiences. Let's shake hands with me.
-          </Typography>
-
-          <div style={{ display: "flex", gap: "10px" }}>
-            <Button
-              sx={{
-                textTransform: "none ",
-                backgroundColor: blue[900]
-              }}
-              variant="contained">
-              Hire Me</Button>
-
-            <Button
-              variant="outlined"
-              sx={{
-                color: blue[900],       // yazı rengi
-                borderColor: blue[900], // çerçeve rengi
-                textTransform: "none"   // büyük harfi kaldırmak için
-              }}
-            >Github</Button>
-
-            <Button
-              variant="outlined"
-              sx={{
-                color: blue[900],       // yazı rengi
-                borderColor: blue[900], // çerçeve rengi
-                textTransform: "none"   // büyük harfi kaldırmak için
-              }}
-            >Linkedin</Button>
-
-          </div>
-
-        </div>
-
-        <div className="header-hero-right">right</div>
-      </div>
-
-    </div>
+    </div >
   )
 }
 
