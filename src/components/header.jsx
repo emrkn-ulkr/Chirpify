@@ -3,7 +3,6 @@ import Switch from "@mui/material/Switch";
 import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
 import Button from '@mui/material/Button';
-import { blue } from "@mui/material/colors";
 import Avatar from '@mui/material/Avatar';
 import ProfileImages from "../images/profile.jpg"
 import { FaGithub } from "react-icons/fa";
@@ -62,8 +61,6 @@ function Header() {
 
       <div className="header-div">
 
-
-
         <div className="header-header">
           <Stack direction="row" spacing={1} alignItems="center">
             <YellowBlueSwitch defaultChecked />
@@ -98,8 +95,8 @@ function Header() {
             <Button
               variant="outlined"
               sx={{
-                color: blue[900],       // yazı rengi
-                borderColor: blue[900], // çerçeve rengi
+                color: "#3730a3",       // yazı rengi
+                borderColor: "#3730a3", // çerçeve rengi
                 textTransform: "none",
                 height: "50px",
                 width: "120px"  // büyük harfi kaldırmak için
@@ -115,7 +112,7 @@ function Header() {
             <div style={{ display: "flex", flexDirection: "row" }}>
 
               <hr style={{ width: "100px", marginTop: "15px", marginRight: "10px", color: "blue" }} />
-              <h5 style={{ color: "darkblue" }}>Emirkan Ülker</h5>
+              <h5 style={{ color: "blue" }}>Emirkan Ülker</h5>
               <br />
             </div>
 
@@ -133,7 +130,7 @@ function Header() {
               <Button
                 sx={{
                   textTransform: "none ",
-                  backgroundColor: blue[900],
+                  backgroundColor: "#3730a3",
                   width: "115px"
                 }}
                 variant="contained">
@@ -142,8 +139,8 @@ function Header() {
               <Button
                 variant="outlined"
                 sx={{
-                  color: blue[900],       // yazı rengi
-                  borderColor: blue[900], // çerçeve rengi
+                  color: "#3730a3",       // yazı rengi
+                  borderColor: "#3730a3", // çerçeve rengi
                   textTransform: "none",
                   width: "115px",
                   gap: "5px"
@@ -156,8 +153,8 @@ function Header() {
                 variant="outlined"
                 sx={{
                   width: "115px",
-                  color: blue[900],
-                  borderColor: blue[900],
+                  color: "#3730a3",
+                  borderColor: "#3730a3",
                   textTransform: "none",
                   display: "flex",
                   alignItems: "center",
@@ -182,7 +179,7 @@ function Header() {
               src={ProfileImages}
               sx={{
                 marginTop: "25px",
-                marginLeft: "150px",
+                marginLeft: "200px",
                 width: 380,          // genişlik
                 height: 300,         // yükseklik
                 borderRadius: "10%", // kareye yakın görünüm
