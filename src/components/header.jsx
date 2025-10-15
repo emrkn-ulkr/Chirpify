@@ -120,6 +120,7 @@ function Header() {
             <Typography variant="h2" sx={{ fontSize: "2.5rem", fontWeight: "bold", color: "black", mt: 1 }}>
               Cretive thinker<br /> Minimalism lover
             </Typography>
+            <br />
             <Typography sx={{ color: "gray" }}>
               Hi, I'm Emirkan. I'm a full-stack developer. If you are looking for a <br />
               Developer who to craft solid and scalable frontend products with <br />
@@ -180,8 +181,8 @@ function Header() {
               sx={{
                 marginTop: "25px",
                 marginLeft: "200px",
-                width: 380,          // genişlik
-                height: 300,         // yükseklik
+                width: 475,          // genişlik
+                height: 330,         // yükseklik
                 borderRadius: "10%", // kareye yakın görünüm
                 boxShadow: "0 4px 10px rgba(0,0,0,0.2)",
               }} />

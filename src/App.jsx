@@ -12,7 +12,7 @@ function App() {
     <div className="app-general-div">
       <div><Header /></div>
       <div><Skills /></div>
-      <div className="bg-blue-500"><Profile /></div>
+      <div><Profile /></div>
       <div className="bg-yellow-500"><Projects /></div>
       <div className="bg-purple-500"><Footer /></div>
     </div>
