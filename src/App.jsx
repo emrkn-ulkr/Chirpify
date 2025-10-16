@@ -14,7 +14,7 @@ function App() {
       <div><Skills /></div>
       <div><Profile /></div>
       <div><Projects /></div>
-      <div className="bg-purple-500"><Footer /></div>
+      <div><Footer /></div>
     </div>
 
   )

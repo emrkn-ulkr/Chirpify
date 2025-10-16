@@ -13,7 +13,7 @@ function Projects() {
                 </Typography>
             </header>
 
-
+            <br />
             <section style={{ display: "flex", justifyContent: "space-between", gap: "100px" }}> {/* İç bölümler */}
 
                 <article style={{ display: "flex", flexDirection: "column", width: "280px" }}>  {/* 1. Kart  */}
@@ -30,7 +30,7 @@ function Projects() {
                         sunt in culpa qui officia deserunt mollit anim id est <br /> laborum.
                     </Typography>
 
-                    <nav style={{ display: "flex", gap: "5px" }}>
+                    <nav style={{ display: "flex", gap: "5px", marginTop: "15px" }}>
                         <Button
                             variant="outlined"
                             sx={{
@@ -81,12 +81,12 @@ function Projects() {
                             height: 180,
                             borderRadius: 0
                         }} />
-                    <Typography variant='h5' sx={{ color: "#4338ca" }}>About Me</Typography>
+                    <Typography variant='h5' sx={{ color: "#4338ca" }}>Random Jokes</Typography>
                     <Typography fontSize={10} sx={{ color: "#6b7280" }}>Excepteur sint occaecat cupidatat non proident, <br />
                         sunt in culpa qui officia deserunt mollit anim id est <br /> laborum.
                     </Typography>
 
-                    <nav style={{ display: "flex", gap: "5px" }}>
+                    <nav style={{ display: "flex", gap: "5px", marginTop: "15px" }}>
                         <Button
                             variant="outlined"
                             sx={{
@@ -137,11 +137,11 @@ function Projects() {
                             height: 180,
                             borderRadius: 0
                         }} />
-                    <Typography variant='h5' sx={{ color: "#4338ca" }}>About Me</Typography>
+                    <Typography variant='h5' sx={{ color: "#4338ca" }}>Journey</Typography>
                     <Typography fontSize={10} sx={{ color: "#6b7280" }}>Excepteur sint occaecat cupidatat non proident, <br />
                         sunt in culpa qui officia deserunt mollit anim id est <br /> laborum.
                     </Typography>
-                    <nav style={{ display: "flex", gap: "5px" }}>
+                    <nav style={{ display: "flex", gap: "5px", marginTop: "15px" }}>
                         <Button
                             variant="outlined"
                             sx={{
