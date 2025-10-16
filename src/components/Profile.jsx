@@ -31,10 +31,14 @@ function Profile() {
                     <Typography sx={{ marginTop: "10px" }}>Full-Stack</Typography>
                 </div>
 
-                <div style={{ marginRight: "300px", marginTop: "-70px" }}>
+                <div style={{ marginRight: "20px", marginTop: "-70px", width: "605px" }}>
                     <Typography variant='h5' sx={{ color: "#4338ca" }}>About Me</Typography>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.<br />
-                    Rerum fugiat libero, sapiente iste ratione maxime!
+                    <br />
+                    Merhaba kendim hakkında kısaca bahsetmek istiyorum. Programlamaya olan ilgim küçüklüğümden başladı 14-15
+                    yaşlarımda scriptlere çok ilgi duyuyordum
+                    daha sonra C# diline yönelerek temellerimi atmıştım ve bir script yayınlayıp ara vermiştim.
+
+                    Şu anda kendimi front-end developer kısmına dahil ediyorum. İlerleyen süreçte back-end asıl ilgim olan kısma da giriş yapacağıma emin olabilirsiniz.
                 </div>
 
             </div>

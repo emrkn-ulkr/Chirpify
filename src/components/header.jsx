@@ -7,7 +7,8 @@ import Avatar from '@mui/material/Avatar';
 import ProfileImages from "../images/profile.jpg"
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
-
+import { LanguageContext } from "../context/LanguageContext";
+import { useContext } from "react";
 
 
 // 🟡 Top sarı, 🔵 arka plan mavi
@@ -49,13 +50,15 @@ const YellowBlueSwitch = styled(Switch)(({ theme }) => ({
       },
       /* Track yine açık halde de sabit mavi kalacak */
       "& + .MuiSwitch-track": {
-        backgroundColor: "#0000cc",
+        backgroundColor: "#4731d3",
       },
     },
   },
 }));
 
 function Header() {
+  const { translations, toggleLanguage, lang } = useContext(LanguageContext);
+
   return (
 
     <section> { /* Ana Bölüm */}
@@ -63,7 +66,11 @@ function Header() {
       <header className="header-header">
         <Stack direction="row" spacing={1} alignItems="center">
           <YellowBlueSwitch defaultChecked />
-          <Typography>DARK MODE | <span className="text-blue-800">TÜRKÇE</span>'YE GEÇ </Typography>
+          <Typography>DARK MODE |
+            <a href style={{ color: "#4731d3", cursor: "pointer" }} onClick={(e) => {
+              e.preventDefault(); toggleLanguage();
+            }}
+            >{translations.toggleLanguage}</a>'YE GEÇ </Typography>
         </Stack>
       </header>
       <br />
