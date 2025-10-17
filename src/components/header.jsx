@@ -63,6 +63,15 @@ function Header() {
     document.body.style.backgroundColor = darkMode ? "#252128" : "#FFFFFF";
   }, [darkMode]);
 
+  const fontHeaderModeC = darkMode ? "#d9d9d9" : "#000000";
+  const turkceyeGecC = darkMode ? "#bab2e6" : "#4731d3";
+  const hireButtonC = darkMode ? "#ffffff" : "#ffffff";
+  const nameColorC = darkMode ? "#9288c9" : "#4338ca";
+  const headerWriteC = darkMode ? "#adbccf" : "#1f2937";
+  const headerWritePrgC = darkMode ? "#e4e3e4" : "#6b7280";
+  const headerFooterHireC = darkMode ? "#e1e1ff" : "#3730a3";
+  const headerFooterGithubC = darkMode ? "#383838" : "#ffffff";
+
   return (
 
     <section> { /* Ana Bölüm */}
@@ -72,8 +81,8 @@ function Header() {
           <YellowBlueSwitch defaultChecked
             checked={darkMode}
             onChange={() => setDarkMode(!darkMode)} />
-          <Typography>DARK MODE |
-            <a href style={{ color: "#4731d3", cursor: "pointer" }} onClick={(e) => {
+          <Typography sx={{ color: fontHeaderModeC }}>{darkMode ? "LIGHT MODE" : "DARK MODE"} |
+            <a href style={{ color: turkceyeGecC, cursor: "pointer" }} onClick={(e) => {
               e.preventDefault(); toggleLanguage();
             }}
             >{translations.toggleLanguage}</a> </Typography>
@@ -107,7 +116,8 @@ function Header() {
           <Button
             variant="outlined"
             sx={{
-              color: "#3730a3",       // yazı rengi
+              color: "#3730a3",
+              backgroundColor: hireButtonC,       // yazı rengi
               borderColor: "#3730a3", // çerçeve rengi
               textTransform: "none",
               height: "50px",
@@ -123,17 +133,17 @@ function Header() {
 
           <div style={{ display: "flex", flexDirection: "row" }}>
 
-            <hr style={{ width: "100px", marginTop: "15px", marginRight: "10px", color: "blue" }} />
-            <h5 style={{ color: "blue" }}>Emirkan Ülker</h5>
+            <hr style={{ width: "100px", marginTop: "15px", marginRight: "10px", color: nameColorC }} />
+            <h5 style={{ color: nameColorC }}>Emirkan Ülker</h5>
             <br />
           </div>
 
 
-          <Typography variant="h2" sx={{ fontSize: "2.5rem", fontWeight: "bold", color: "black", mt: 1 }}>
+          <Typography variant="h2" sx={{ fontSize: "2.5rem", fontWeight: "bold", color: headerWriteC, mt: 1 }}>
             {translations.welcomeTitle}
           </Typography>
           <br />
-          <Typography sx={{ color: "gray" }}>
+          <Typography sx={{ color: headerWritePrgC }}>
             {translations.welcomeDesc}
           </Typography>
           <br />
@@ -141,8 +151,9 @@ function Header() {
             <Button
               sx={{
                 textTransform: "none ",
-                backgroundColor: "#3730a3",
-                width: "115px"
+                backgroundColor: headerFooterHireC,
+                width: "115px",
+                color: darkMode ? "#000000" : "#e6e5f3"
               }}
               variant="contained">
               {translations.hireMe}</Button>
@@ -150,31 +161,35 @@ function Header() {
             <Button
               variant="outlined"
               sx={{
-                color: "#3730a3",       // yazı rengi
-                borderColor: "#3730a3", // çerçeve rengi
+                color: darkMode ? "#e1e1ff" : "#3730a3",       // yazı rengi // çerçeve rengi
                 textTransform: "none",
                 width: "115px",
-                gap: "5px"
-
+                gap: "5px",
+                backgroundColor: headerFooterGithubC,
+                borderColor: darkMode ? "#b7b7cd" : "#3730a3"
               }}
 
-            ><span><FaGithub style={{ display: "flex", fontSize: "30px" }} /></span>  Github</Button>
+            ><span>
+                <FaGithub style={{ display: "flex", fontSize: "30px", color: darkMode ? "#e1e1ff" : "#3730a3" }} /></span>  Github
+            </Button>
 
             <Button
               variant="outlined"
               sx={{
                 width: "115px",
-                color: "#3730a3",
-                borderColor: "#3730a3",
+                color: darkMode ? "#e1e1ff" : "#3730a3",
+                borderColor: darkMode ? "#b7b7cd" : "#3730a3",
                 textTransform: "none",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
                 gap: "5px",
                 padding: "6px 14px", // buton iç boşluğu
+                backgroundColor: headerFooterGithubC,
+
               }}
             >
-              <span style={{ display: "flex", fontSize: "30px" }}>
+              <span style={{ display: "flex", fontSize: "30px", color: darkMode ? "#e1e1ff" : "#3730a3" }}>
                 <FaLinkedinIn />
               </span>
               Linkedin
