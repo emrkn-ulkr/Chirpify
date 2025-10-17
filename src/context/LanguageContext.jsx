@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import React, { createContext, useState } from "react";
 import tr from "../locales/tr.json";
 import en from "../locales/en.json";
@@ -6,7 +7,7 @@ import en from "../locales/en.json";
 export const LanguageContext = createContext();
 
 export const LanguageProvider = ({ children }) => {
-    const [lang, setLang] = useState("tr"); // Başlangıç dili
+    const [lang, setLang] = useState("en"); // Başlangıç dili
     const translations = lang === "tr" ? tr : en;
 
     const toggleLanguage = () => {

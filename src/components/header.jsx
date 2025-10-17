@@ -57,7 +57,7 @@ const YellowBlueSwitch = styled(Switch)(({ theme }) => ({
 }));
 
 function Header() {
-  const { translations, toggleLanguage, lang } = useContext(LanguageContext);
+  const { translations, toggleLanguage } = useContext(LanguageContext);
 
   return (
 
@@ -70,7 +70,7 @@ function Header() {
             <a href style={{ color: "#4731d3", cursor: "pointer" }} onClick={(e) => {
               e.preventDefault(); toggleLanguage();
             }}
-            >{translations.toggleLanguage}</a>'YE GEÇ </Typography>
+            >{translations.toggleLanguage}</a> </Typography>
         </Stack>
       </header>
       <br />
@@ -89,14 +89,14 @@ function Header() {
             textTransform: "none",
             height: "50px",
             width: "120px"
-          }} variant="text" >Skills</Button>
+          }} variant="text" >{translations.skills}</Button>
 
           <Button sx={{
             color: "gray",
             textTransform: "none",
             height: "50px",
             width: "120px"
-          }} variant="text" >Projects</Button>
+          }} variant="text" >{translations.projects}</Button>
 
           <Button
             variant="outlined"
@@ -107,7 +107,7 @@ function Header() {
               height: "50px",
               width: "120px"  // büyük harfi kaldırmak için
             }}
-          >Hire Me</Button>
+          >{translations.hireMe}</Button>
         </div>
       </nav>
 
@@ -124,13 +124,11 @@ function Header() {
 
 
           <Typography variant="h2" sx={{ fontSize: "2.5rem", fontWeight: "bold", color: "black", mt: 1 }}>
-            Cretive thinker<br /> Minimalism lover
+            {translations.welcomeTitle}
           </Typography>
           <br />
           <Typography sx={{ color: "gray" }}>
-            Hi, I'm Emirkan. I'm a full-stack developer. If you are looking for a <br />
-            Developer who to craft solid and scalable frontend products with <br />
-            great user experiences. Let's shake hands with me.
+            {translations.welcomeDesc}
           </Typography>
           <br />
           <nav style={{ display: "flex", gap: "10px" }}>
@@ -141,7 +139,7 @@ function Header() {
                 width: "115px"
               }}
               variant="contained">
-              Hire Me</Button>
+              {translations.hireMe}</Button>
 
             <Button
               variant="outlined"

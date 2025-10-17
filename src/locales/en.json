@@ -1,11 +1,23 @@
 {
-    "toggleLanguage": "Switch to Turkish",
+    "toggleLanguage": "TÜRKÇE'YE GEÇ",
     "skills": "Skills",
     "projects": "Projects",
     "hireMe": "Hire Me",
     "profile": "Profile",
-    "aboutMe": "Hello, I'd like to briefly introduce myself. My passion for programming sparked at a young age. Around 14 or 15, I became fascinated with scripting, which led me to learn C# to build my foundational skills. I concluded that initial phase of my journey by publishing a script before taking a break.Currently, I am focusing on front-end development. Looking ahead, I am confident that I will also delve into back-end development, an area I am particularly passionate about.",
     "welcomeTitle": "Creative thinker\nMinimalism lover",
-    "welcomeDesc": "Hi, I'm Emirkan. I'm a front-end developer. If you are looking for a Developer who can craft solid and scalable frontend products...",
-    "contactEmail": "emirkanulker08@gmail.com"
+    "welcomeDesc": "Hello, I'm Emirkan. I'm a Front-end developer. If you're looking for someone to build robust and scalable frontend products with great user experiences, let's achieve great things together!",
+    "contactEmail": "emirkanulker08@gmail.com",
+    "javaScript": "JavaScript is the most commonly used programming language for adding interactivity to websites. With this language, actions such as clicking buttons or filling out forms on web pages become dynamic. Today, it is used not only in browsers but also on servers thanks to Node.js technology. With this feature, JavaScript is a versatile language that can be used for both frontend and backend development. In short, JavaScript is one of the fundamental building blocks of the modern internet, and learning it is a major step forward in the world of software development.",
+    "reactJs": "ReactJS is a JavaScript-based library used for building user interfaces. It was developed by Facebook and is one of the most popular frontend technologies today. Thanks to its component-based structure, React allows code to be more organized, reusable, and easy to manage. In addition, its Virtual DOM structure enables web pages to update quickly and improves performance. In short, ReactJS is an excellent tool for developing modern, fast, and scalable web applications.",
+    "nodeJs": "Node.js is an open-source runtime environment that allows JavaScript to run on the server side. It enables JavaScript to run outside the browser, making it easier to develop web servers and backend applications. With its event-driven and non-blocking (asynchronous) architecture, Node.js allows the creation of high-performance and scalable applications. Additionally, its extensive package ecosystem, npm (Node Package Manager), provides access to many ready-to-use libraries. In short, Node.js is a powerful tool that offers fast and efficient backend solutions in modern web development.",
+    "dateOfBirth": "dateOfBirthAnsw",
+    "dateOfBirthAnsw": "30.03.2001",
+    "cityOfResidence": "cityOfResidence",
+    "cityOfResidenceAnsw": "Adana",
+    "educationLevel": "educationLevel",
+    "educationLevelAnsw": "Associate Degree,\nComputer Programming",
+    "preferredRole": "preferredRole",
+    "preferredRoleAnsw": "Front-end",
+    "profileAboutMe": "AboutMe",
+    "profileAboutMeAnsw": "Hello, I would like to briefly talk about myself. My interest in programming started when I was a child. Around the ages of 14-15, I was very interested in scripts. Later, I focused on the C# language to build my foundations, and I completed this process by publishing a script before taking a break. Currently, I consider myself part of the front-end developer field. In the future, you can be sure that I will also venture into the back-end side, which I am more interested in."
 }
