@@ -8,7 +8,7 @@ import ProfileImages from "../images/profile.jpg"
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { LanguageContext } from "../context/LanguageContext";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 
 
 // 🟡 Top sarı, 🔵 arka plan mavi
@@ -58,6 +58,10 @@ const YellowBlueSwitch = styled(Switch)(({ theme }) => ({
 
 function Header() {
   const { translations, toggleLanguage } = useContext(LanguageContext);
+  const [darkMode, setDarkMode] = useState(false);
+  useEffect(() => {
+    document.body.style.backgroundColor = darkMode ? "#252128" : "#FFFFFF";
+  }, [darkMode]);
 
   return (
 
@@ -65,7 +69,9 @@ function Header() {
 
       <header className="header-header">
         <Stack direction="row" spacing={1} alignItems="center">
-          <YellowBlueSwitch defaultChecked />
+          <YellowBlueSwitch defaultChecked
+            checked={darkMode}
+            onChange={() => setDarkMode(!darkMode)} />
           <Typography>DARK MODE |
             <a href style={{ color: "#4731d3", cursor: "pointer" }} onClick={(e) => {
               e.preventDefault(); toggleLanguage();

@@ -19,5 +19,11 @@
     "preferredRole": "preferredRole",
     "preferredRoleAnsw": "Front-end",
     "profileAboutMe": "AboutMe",
-    "profileAboutMeAnsw": "Hello, I would like to briefly talk about myself. My interest in programming started when I was a child. Around the ages of 14-15, I was very interested in scripts. Later, I focused on the C# language to build my foundations, and I completed this process by publishing a script before taking a break. Currently, I consider myself part of the front-end developer field. In the future, you can be sure that I will also venture into the back-end side, which I am more interested in."
+    "profileAboutMeAnsw": "Hello, I would like to briefly talk about myself. My interest in programming started when I was a child. Around the ages of 14-15, I was very interested in scripts. Later, I focused on the C# language to build my foundations, and I completed this process by publishing a script before taking a break. Currently, I consider myself part of the front-end developer field. In the future, you can be sure that I will also venture into the back-end side, which I am more interested in.",
+    "project_1": "Workintech has been the main guide in my interest in software. Even though I already had some knowledge of programming, I didn’t know what direction to take. Workintech showed me the right path and helped me gain knowledge in areas I was unfamiliar with. Thanks to its instructors and well-structured system, I can confidently say that I’ve had a successful learning experience.",
+    "project_2": "I present the text color guessing game I developed under the guidance and instructions of my instructor Alihan Güzel, whom I met while I was a part of Workintech. This project is one of the first front-end projects I developed, helping me improve my JavaScript logic and design skills. I have shared all the source code for this project openly on my GitHub account for everyone worldwide.",
+    "project_3": "Web Pizza is another front-end project I developed while I was a part of Workintech. In this project, I focused heavily on the concepts of useState and Props, turning my knowledge of these topics into practical experience and creative problem-solving skills. I proudly present this project to your attention — all the source code is openly available on my GitHub account for everyone worldwide.",
+    "viewSite": "View Site",
+    "workFooterTgthr": "Let's work together on \nyour next product.",
+    "pBlog": "Personal Blog"
 }

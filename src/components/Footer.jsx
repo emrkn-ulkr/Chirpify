@@ -1,11 +1,14 @@
 import React from 'react'
 import { Typography } from '@mui/material';
-
+import { LanguageContext } from "../context/LanguageContext";
+import { useContext } from "react";
 function Footer() {
+    const { translations } = useContext(LanguageContext);
+
     return (
         <footer> { /* Ana Bölüm */}
             <header>
-                <Typography variant='h3' >Let's work together on <br />your next product. </Typography>
+                <Typography style={{ whiteSpace: 'pre-line' }} variant='h3' >{translations.workFooterTgthr} </Typography>
 
             </header>
             <br />
@@ -15,7 +18,7 @@ function Footer() {
                 </div>
 
                 <div style={{ display: "flex", gap: "10px", marginLeft: "670px" }}>
-                    <a href='#' style={{ fontWeight: "bold" }}>Personal Blog</a>
+                    <a href='#' style={{ fontWeight: "bold" }}>{translations.pBlog}</a>
                     <a href='https://github.com/emrkn-ulkr' title='Github' style={{ fontWeight: "bold", color: "#00ab6b" }}>Github</a>
                     <a href='https://www.linkedin.com/in/emirkan-%C3%BClker-dev/' title='Linkedin' style={{ fontWeight: "bold", color: "#0077b5" }}>Linkedin</a>
                 </div>
