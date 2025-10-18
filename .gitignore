@@ -1,0 +1,36 @@
+# Node.js dependencies
+node_modules/
+
+# Build çıktıları
+dist/
+build/
+
+# Log dosyaları
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Sistem dosyaları
+.DS_Store
+Thumbs.db
+
+# IDE / Editor dosyaları
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Environment dosyaları
+.env
+.env.local
+.env.*.local
+
+# Paket manager lock dosyaları (isteğe bağlı)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
