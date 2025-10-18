@@ -20,8 +20,8 @@ function App() {
           <div><Skills /></div>
           <div><Profile /></div>
           <div><Projects /></div>
-          <div></div>
-        </div><Footer />
+        </div>
+        <Footer />
       </DarkModeProvider>
     </LanguageProvider >
 

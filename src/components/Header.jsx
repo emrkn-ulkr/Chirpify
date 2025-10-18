@@ -89,7 +89,8 @@ function Header() {
               }} onClick={(e) => {
                 e.preventDefault(); toggleLanguage();
               }}
-            >{translations.toggleLanguage}</a> </Typography>
+            >{translations.toggleLanguage}</a> 
+            </Typography>
         </Stack>
       </header>
       <br />
