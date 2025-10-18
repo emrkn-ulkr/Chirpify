@@ -2,7 +2,7 @@
 
 Bu template, **React** ile **Vite** kullanarak minimal bir proje kurulumu sağlar.   
  **Özellikler:** Hot Module Replacement (**HMR**, canlı yenileme),  
-  temel **ESLint** kuralları ile temiz kod ve minimal, hızlı başlangıç   
+  temel **ESLint** kuralları ile temiz kod ve minimal, hızlı başlangıç.   
 
 ---
 
