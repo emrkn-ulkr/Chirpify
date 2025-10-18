@@ -7,14 +7,23 @@ import yaziRengiBulmaOyunu from "../images/yaziRengi.png";
 import pizzaUyg from "../images/pizzaUyg.png";
 import { LanguageContext } from "../context/LanguageContext";
 import { useContext } from "react";
+import { DarkModeContext } from "./DarkModeContext";
 
 function Projects() {
     const { translations } = useContext(LanguageContext);
+    const { darkMode } = useContext(DarkModeContext);
+
+    const projectsNameWriteC = darkMode ? "#adbccf" : "#1f2937";
+    const navInfoC = darkMode ? "#cfcbff" : "#4338ca";
+    const projectsWriteC = darkMode ? "#e4e3e4" : "#6b7280";
+    const footerWriteC = darkMode ? " #e1e1ff" : "#3730a3";
+
+
 
     return (
         <section> {/* Ana bölüm  */}
             <header>
-                <Typography variant='h3'>
+                <Typography variant='h3' sx={{ color: projectsNameWriteC }}>
                     {translations.projects}
                 </Typography>
             </header>
@@ -31,9 +40,9 @@ function Projects() {
                             height: 180,         // yükseklik // kareye yakın görünüm
                             borderRadius: 0
                         }} />
-                    <Typography variant='h5' sx={{ color: "#4338ca" }}>Workintech</Typography>
+                    <Typography variant='h5' sx={{ color: navInfoC }}>Workintech</Typography>
                     <br />
-                    <Typography fontSize={10} sx={{ color: "#6b7280" }}>{translations.project_1}
+                    <Typography fontSize={10} sx={{ color: projectsWriteC }}>{translations.project_1}
                     </Typography>
 
                     <nav style={{ display: "flex", gap: "5px", marginTop: "15px" }}>
@@ -72,8 +81,8 @@ function Projects() {
                     </nav>
 
                     <footer style={{ display: "flex", justifyContent: "space-between" }}>
-                        <a href="https://github.com/emrkn-ulkr" style={{ color: "#3730a3", textDecoration: "underline", marginTop: "15px" }}> Github </a>
-                        <a href="https://www.workintech.com.tr/" style={{ color: "#3730a3", textDecoration: "underline", marginTop: "15px" }}> {translations.viewSite} </a>
+                        <a href="https://github.com/emrkn-ulkr" target="_blank" style={{ color: footerWriteC, textDecoration: "underline", marginTop: "15px", fontWeight: "bold" }}> Github </a>
+                        <a href="https://www.workintech.com.tr/" target="_blank" style={{ color: footerWriteC, textDecoration: "underline", marginTop: "15px", fontWeight: "bold" }}> {translations.viewSite} </a>
                     </footer>
 
                 </article>
@@ -87,9 +96,9 @@ function Projects() {
                             height: 180,
                             borderRadius: 0
                         }} />
-                    <Typography variant='h5' sx={{ color: "#4338ca" }}>Yazı Rengini Bulma</Typography>
+                    <Typography variant='h5' sx={{ color: navInfoC }}>Yazı Rengini Bulma</Typography>
                     <br />
-                    <Typography fontSize={10} sx={{ color: "#6b7280" }}>{translations.project_2}
+                    <Typography fontSize={10} sx={{ color: projectsWriteC }}>{translations.project_2}
                     </Typography>
 
                     <nav style={{ display: "flex", gap: "5px", marginTop: "15px" }}>
@@ -128,8 +137,8 @@ function Projects() {
                     </nav>
 
                     <footer style={{ display: "flex", justifyContent: "space-between" }}>
-                        <a href="https://github.com/emrkn-ulkr" style={{ color: "#3730a3", textDecoration: "underline", marginTop: "15px" }}> Github </a>
-                        <a href="emrkn-ulkr.github.io" style={{ color: "#3730a3", textDecoration: "underline", marginTop: "15px" }}> {translations.viewSite}</a>
+                        <a href="https://github.com/emrkn-ulkr" target="_blank" style={{ color: footerWriteC, textDecoration: "underline", marginTop: "15px", fontWeight: "bold" }}> Github </a>
+                        <a href="https://emrkn-ulkr.github.io/" target="_blank" style={{ color: footerWriteC, textDecoration: "underline", marginTop: "15px", fontWeight: "bold" }}> {translations.viewSite}</a>
 
                     </footer>
                 </article>
@@ -143,9 +152,9 @@ function Projects() {
                             height: 180,
                             borderRadius: 0
                         }} />
-                    <Typography variant='h5' sx={{ color: "#4338ca" }}>Web Pizza</Typography>
+                    <Typography variant='h5' sx={{ color: navInfoC }}>Web Pizza</Typography>
                     <br />
-                    <Typography fontSize={10} sx={{ color: "#6b7280" }}>{translations.project_3}
+                    <Typography fontSize={10} sx={{ color: projectsWriteC }}>{translations.project_3}
                     </Typography>
                     <nav style={{ display: "flex", gap: "5px", marginTop: "15px" }}>
                         <Button
@@ -183,8 +192,8 @@ function Projects() {
                     </nav>
 
                     <footer style={{ display: "flex", justifyContent: "space-between" }}>
-                        <a href="https://github.com/emrkn-ulkr" style={{ color: "#3730a3", textDecoration: "underline", marginTop: "15px" }}> Github </a>
-                        <a href="https://github.com/emrkn-ulkr/fsweb-s8-challenge-pizza" style={{ color: "#3730a3", textDecoration: "underline", marginTop: "15px" }}> {translations.viewSite} </a>
+                        <a href="https://github.com/emrkn-ulkr" target="_blank" style={{ color: footerWriteC, textDecoration: "underline", marginTop: "15px", fontWeight: "bold" }}> Github </a>
+                        <a href="https://github.com/emrkn-ulkr/fsweb-s8-challenge-pizza" target="_blank" style={{ color: footerWriteC, textDecoration: "underline", marginTop: "15px", fontWeight: "bold" }}> {translations.viewSite} </a>
 
                     </footer>
 

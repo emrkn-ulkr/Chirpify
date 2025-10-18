@@ -8,7 +8,8 @@ import ProfileImages from "../images/profile.jpg"
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { LanguageContext } from "../context/LanguageContext";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
+import { DarkModeContext } from "./DarkModeContext";
 
 
 // 🟡 Top sarı, 🔵 arka plan mavi
@@ -58,7 +59,7 @@ const YellowBlueSwitch = styled(Switch)(({ theme }) => ({
 
 function Header() {
   const { translations, toggleLanguage } = useContext(LanguageContext);
-  const [darkMode, setDarkMode] = useState(false);
+  const { darkMode, setDarkMode } = useContext(DarkModeContext);
   useEffect(() => {
     document.body.style.backgroundColor = darkMode ? "#252128" : "#FFFFFF";
   }, [darkMode]);
@@ -78,13 +79,19 @@ function Header() {
 
       <header className="header-header">
         <Stack direction="row" spacing={1} alignItems="center">
-          <YellowBlueSwitch defaultChecked
+          <YellowBlueSwitch
             checked={darkMode}
             onChange={() => setDarkMode(!darkMode)} />
-          <Typography sx={{ color: fontHeaderModeC }}>{darkMode ? "LIGHT MODE" : "DARK MODE"} |
-            <a href style={{ color: turkceyeGecC, cursor: "pointer" }} onClick={(e) => {
-              e.preventDefault(); toggleLanguage();
-            }}
+          <Typography
+            sx={{ color: fontHeaderModeC }}>
+            {darkMode ? "LIGHT MODE" : "DARK MODE"} |
+            <a href="#"
+              style={{
+                color: turkceyeGecC,
+                cursor: "pointer"
+              }} onClick={(e) => {
+                e.preventDefault(); toggleLanguage();
+              }}
             >{translations.toggleLanguage}</a> </Typography>
         </Stack>
       </header>
@@ -99,21 +106,29 @@ function Header() {
         <br />
 
         <div className="header-bar-right">
-          <Button sx={{
-            color: "gray",
-            textTransform: "none",
-            height: "50px",
-            width: "120px"
-          }} variant="text" >{translations.skills}</Button>
-
-          <Button sx={{
-            color: "gray",
-            textTransform: "none",
-            height: "50px",
-            width: "120px"
-          }} variant="text" >{translations.projects}</Button>
+          <Button component="a"
+            href="https://github.com/emrkn-ulkr"
+            sx={{
+              color: "gray",
+              textTransform: "none",
+              height: "50px",
+              width: "120px"
+            }} variant="text" >{translations.skills}</Button>
 
           <Button
+            component="a"
+            href="https://github.com/emrkn-ulkr"
+            sx={{
+              color: "gray",
+              textTransform: "none",
+              height: "50px",
+              width: "120px"
+            }} variant="text" >{translations.projects}</Button>
+
+          <Button
+            component="a"
+            href="mailto:emirkanulker08@gmail.com"
+            target="_blank"
             variant="outlined"
             sx={{
               color: "#3730a3",
@@ -149,6 +164,9 @@ function Header() {
           <br />
           <nav style={{ display: "flex", gap: "10px" }}>
             <Button
+              component="a"
+              href="mailto:emirkanulker08@gmail.com"
+              target="_blank"
               sx={{
                 textTransform: "none ",
                 backgroundColor: headerFooterHireC,
@@ -159,6 +177,9 @@ function Header() {
               {translations.hireMe}</Button>
 
             <Button
+              component="a"
+              href="https://github.com/emrkn-ulkr"
+              target="_blank"
               variant="outlined"
               sx={{
                 color: darkMode ? "#e1e1ff" : "#3730a3",       // yazı rengi // çerçeve rengi
@@ -174,6 +195,9 @@ function Header() {
             </Button>
 
             <Button
+              component="a"
+              href="https://www.linkedin.com/in/emirkan-%C3%BClker-dev/"
+              target="_blank"
               variant="outlined"
               sx={{
                 width: "115px",
