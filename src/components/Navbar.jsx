@@ -57,7 +57,7 @@ const YellowBlueSwitch = styled(Switch)(({ theme }) => ({
   },
 }));
 
-function Header() {
+function Navbar() {
   const { translations, toggleLanguage } = useContext(LanguageContext);
   const { darkMode, setDarkMode } = useContext(DarkModeContext);
   useEffect(() => {
@@ -247,4 +247,4 @@ function Header() {
   )
 }
 
-export default Header
+export default Navbar
