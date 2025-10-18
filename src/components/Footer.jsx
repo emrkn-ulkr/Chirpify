@@ -1,5 +1,5 @@
 import React from 'react'
-import { Typography } from '@mui/material';
+import { Typography, Link } from '@mui/material';
 import { LanguageContext } from "../context/LanguageContext";
 import { useContext } from "react";
 import { DarkModeContext } from "./DarkModeContext";
@@ -24,13 +24,63 @@ function Footer() {
             <br />
             <nav style={{ display: "flex" }}>
                 <div style={{ marginLeft: "350px" }}>
-                    <span>&#128073;</span>  <a href='mailto:emirkanulker08@gmail.com' target="_blank" title='E-posta' style={{ color: emailC, fontWeight: "bold", textDecoration: "underline" }}>emirkanulker08@gmail.com</a>
+                    <span>&#128073;</span>
+                    <Link
+                        href='mailto:emirkanulker08@gmail.com'
+                        target="_blank"
+                        title='E-posta'
+                        underline="always" // alt çizgi
+                        sx={{
+                            color: emailC,           // mevcut renk değişkenini koruduk
+                            fontWeight: 'bold',      // kalın yazı
+                            '&:hover': { color: 'green' },
+                            transition: 'color 0.3s' // hover olunca mor renk
+                        }}
+                    >
+                        emirkanulker08@gmail.com
+                    </Link>
                 </div>
 
                 <div style={{ display: "flex", gap: "10px", marginLeft: "673px" }}>
-                    <a href='#' style={{ fontWeight: "bold", color: personalBlogC }}>{translations.pBlog}</a>
-                    <a href='https://github.com/emrkn-ulkr' target="_blank" title='Github' style={{ fontWeight: "bold", color: githubC }}>Github</a>
-                    <a href='https://www.linkedin.com/in/emirkan-%C3%BClker-dev/' target="_blank" title='Linkedin' style={{ fontWeight: "bold", color: linkedinC }}>Linkedin</a>
+                    <Link
+                        href="#"
+                        underline="always"
+                        sx={{
+                            fontWeight: 'bold',
+                            color: personalBlogC,
+                            '&:hover': { color: 'aqua' },
+                            transition: 'color 0.3s'
+                        }}
+                    >
+                        {translations.pBlog}
+                    </Link>                    <Link
+                        href="https://github.com/emrkn-ulkr"
+                        target="_blank"
+                        title="Github"
+                        underline="always"
+                        sx={{
+                            fontWeight: 'bold',
+                            color: githubC,
+                            '&:hover': { color: 'yellow' },
+                            transition: 'color 0.3s'
+                        }}
+                    >
+                        Github
+                    </Link>
+                    <Link
+                        href="https://www.linkedin.com/in/emirkan-%C3%BClker-dev/"
+                        target="_blank"
+                        title="Linkedin"
+                        underline="always"
+                        sx={{
+                            fontWeight: 'bold',
+                            color: linkedinC,
+                            '&:hover': { color: 'red' },
+                            transition: 'color 0.3s'
+                        }}
+                    >
+                        Linkedin
+                    </Link>
                 </div>
             </nav>
         </footer>

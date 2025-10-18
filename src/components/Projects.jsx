@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography } from '@mui/material';
+import { Typography, Link } from '@mui/material';
 import Avatar from '@mui/material/Avatar';
 import workintech from "../images/wrkntch.png";
 import Button from '@mui/material/Button';
@@ -8,6 +8,7 @@ import pizzaUyg from "../images/pizzaUyg.png";
 import { LanguageContext } from "../context/LanguageContext";
 import { useContext } from "react";
 import { DarkModeContext } from "./DarkModeContext";
+
 
 function Projects() {
     const { translations } = useContext(LanguageContext);
@@ -81,8 +82,31 @@ function Projects() {
                     </nav>
 
                     <footer style={{ display: "flex", justifyContent: "space-between" }}>
-                        <a href="https://github.com/emrkn-ulkr" target="_blank" style={{ color: footerWriteC, textDecoration: "underline", marginTop: "15px", fontWeight: "bold" }}> Github </a>
-                        <a href="https://www.workintech.com.tr/" target="_blank" style={{ color: footerWriteC, textDecoration: "underline", marginTop: "15px", fontWeight: "bold" }}> {translations.viewSite} </a>
+                        <Link
+                            href="https://github.com/emrkn-ulkr"
+                            target="_blank"
+                            underline="always"  // alt çizgi
+                            sx={{
+                                mt: 2, fontWeight: 'bold', color: footerWriteC, '&:hover': { color: '#9238c7' },
+                                transition: 'color 0.3s'
+                            }}
+                        >
+                            Github
+                        </Link>
+                        <Link
+                            href="https://www.workintech.com.tr/"
+                            target="_blank"
+                            underline="always" // alt çizgi
+                            sx={{
+                                color: footerWriteC,
+                                mt: 2,               // margin-top: 16px (Tailwind mt-4 ≈ 16px)
+                                fontWeight: 'bold',
+                                '&:hover': { color: '#2ed177' },
+                                transition: 'color 0.3s' // hover efekti
+                            }}
+                        >
+                            {translations.viewSite}
+                        </Link>
                     </footer>
 
                 </article>
@@ -137,8 +161,31 @@ function Projects() {
                     </nav>
 
                     <footer style={{ display: "flex", justifyContent: "space-between" }}>
-                        <a href="https://github.com/emrkn-ulkr" target="_blank" style={{ color: footerWriteC, textDecoration: "underline", marginTop: "15px", fontWeight: "bold" }}> Github </a>
-                        <a href="https://emrkn-ulkr.github.io/" target="_blank" style={{ color: footerWriteC, textDecoration: "underline", marginTop: "15px", fontWeight: "bold" }}> {translations.viewSite}</a>
+                        <Link
+                            href="https://github.com/emrkn-ulkr"
+                            target="_blank"
+                            underline="always"  // alt çizgi
+                            sx={{
+                                mt: 2, fontWeight: 'bold', color: footerWriteC, '&:hover': { color: '#9238c7' },
+                                transition: 'color 0.3s'
+                            }}
+                        >
+                            Github
+                        </Link>
+                        <Link
+                            href="https://emrkn-ulkr.github.io/"
+                            target="_blank"
+                            underline="always" // alt çizgi
+                            sx={{
+                                color: footerWriteC,
+                                mt: 2,               // margin-top: 16px (Tailwind mt-4 ≈ 16px)
+                                fontWeight: 'bold',
+                                '&:hover': { color: '#2ed177' },
+                                transition: 'color 0.3s' // hover efekti
+                            }}
+                        >
+                            {translations.viewSite}
+                        </Link>
 
                     </footer>
                 </article>
@@ -192,8 +239,31 @@ function Projects() {
                     </nav>
 
                     <footer style={{ display: "flex", justifyContent: "space-between" }}>
-                        <a href="https://github.com/emrkn-ulkr" target="_blank" style={{ color: footerWriteC, textDecoration: "underline", marginTop: "15px", fontWeight: "bold" }}> Github </a>
-                        <a href="https://github.com/emrkn-ulkr/fsweb-s8-challenge-pizza" target="_blank" style={{ color: footerWriteC, textDecoration: "underline", marginTop: "15px", fontWeight: "bold" }}> {translations.viewSite} </a>
+                        <Link
+                            href="https://github.com/emrkn-ulkr"
+                            target="_blank"
+                            underline="always"  // alt çizgi
+                            sx={{
+                                mt: 2, fontWeight: 'bold', color: footerWriteC, '&:hover': { color: '#9238c7' },
+                                transition: 'color 0.3s'
+                            }}
+                        >
+                            Github
+                        </Link>
+                        <Link
+                            href="https://github.com/emrkn-ulkr/fsweb-s8-challenge-pizza"
+                            target="_blank"
+                            underline="always" // alt çizgi
+                            sx={{
+                                color: footerWriteC,
+                                mt: 2,               // margin-top: 16px (Tailwind mt-4 ≈ 16px)
+                                fontWeight: 'bold',
+                                '&:hover': { color: '#2ed177' },
+                                transition: 'color 0.3s' // hover efekti
+                            }}
+                        >
+                            {translations.viewSite}
+                        </Link>
 
                     </footer>
 
