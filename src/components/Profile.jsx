@@ -2,7 +2,7 @@ import React from 'react'
 import { Typography } from '@mui/material'
 import { LanguageContext } from "../context/LanguageContext";
 import { useContext } from "react";
-import { DarkModeContext } from "./DarkModeContext";
+import { DarkModeContext } from "../context/DarkModeContext";
 
 
 function Profile() {

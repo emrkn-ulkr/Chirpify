@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { Typography, Link } from '@mui/material';
 import Avatar from '@mui/material/Avatar';
 import workintech from "../images/wrkntch.png";
@@ -7,7 +7,7 @@ import yaziRengiBulmaOyunu from "../images/yaziRengi.png";
 import pizzaUyg from "../images/pizzaUyg.png";
 import { LanguageContext } from "../context/LanguageContext";
 import { useContext } from "react";
-import { DarkModeContext } from "./DarkModeContext";
+import { DarkModeContext } from "../context/DarkModeContext";
 import { fakeUser } from "../assets/data.js";
 import axios from 'axios';
 

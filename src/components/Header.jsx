@@ -9,7 +9,7 @@ import { FaGithub } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { LanguageContext } from "../context/LanguageContext";
 import { useContext } from "react";
-import { DarkModeContext } from "./DarkModeContext";
+import { DarkModeContext } from "../context/DarkModeContext";
 
 
 // 🟡 Top sarı, 🔵 arka plan mavi

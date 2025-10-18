@@ -3,7 +3,7 @@ import Profile from "./components/Profile.jsx";
 import Projects from "./components/Projects.jsx";
 import Footer from "./components/Footer.jsx";
 import { LanguageProvider } from "./context/LanguageContext.jsx";
-import { DarkModeProvider } from "./components/DarkModeContext.jsx";
+import { DarkModeProvider } from "./context/DarkModeContext.jsx";
 import Header from "./components/Header.jsx";
 
 
