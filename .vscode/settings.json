@@ -1,0 +1,4 @@
+{
+    "errorLens.selectProblemType": "activeLine",
+    "typescript.tsserver.web.projectWideIntellisense.suppressSemanticErrors": false
+}
