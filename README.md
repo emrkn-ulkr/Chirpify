@@ -7,8 +7,8 @@ Bu template, **React** ile **Vite** kullanarak minimal bir proje kurulumu sağla
 
 ## 🔧 Kurulum
 
-Repo'yu klonlayın: `git clone <repo-link>`, 
-proje dizinine gidin: `cd <repo-folder>`,
+Repo'yu klonlayın: `git clone <repo-link>`,    
+proje dizinine gidin: `cd <repo-folder>`,   
  bağımlılıkları yükleyin: `npm install` ve projeyi başlatın (geliştirme modunda): `npm run dev`. 
   Tarayıcı otomatik olarak açılır ve değişiklikler anında yansır.
    Üretim modu için build: `npm run build`.
