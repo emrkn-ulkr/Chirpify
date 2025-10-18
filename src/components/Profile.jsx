@@ -11,7 +11,7 @@ function Profile() {
 
     const profileWriteC = darkMode ? "#adbccf" : "#1f2937";
     const navInfoC = darkMode ? "#9288c9" : "#4338ca";
-    const personalWriteC = darkMode ? "#e4e3e4" : "black";
+    const personalWriteC = darkMode ? "#e4e3e4" : "#6b7280";
 
 
     return (

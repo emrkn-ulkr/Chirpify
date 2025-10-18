@@ -99,7 +99,7 @@ function Header() {
 
       <nav className="header-bar-div">
         <Avatar sx={{ backgroundColor: "#ede7f6", color: "#9575cd", transform: "rotate(30deg)", width: "45px", height: "45px" }}>
-          A
+          E
         </Avatar>
         <br />
         <br />
