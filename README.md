@@ -1,14 +1,28 @@
-# React + Vite
+#  React + Vite Template
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bu template, **React** ile **Vite** kullanarak minimal bir proje kurulumu sağlar. 
+ **Özellikler:** Hot Module Replacement (**HMR**, canlı yenileme), temel **ESLint** kuralları ile temiz kod ve minimal, hızlı başlangıç 
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔧 Kurulum
 
-## React Compiler
+Repo'yu klonlayın: `git clone <repo-link>`, 
+proje dizinine gidin: `cd <repo-folder>`,
+ bağımlılıkları yükleyin: `npm install` ve projeyi başlatın (geliştirme modunda): `npm run dev`. 
+  Tarayıcı otomatik olarak açılır ve değişiklikler anında yansır.
+   Üretim modu için build: `npm run build`.
+  Lint kontrolü için: `npm run lint`. 
+   HMR sayesinde dosya kaydedildiğinde sayfa otomatik yenilenir. 
+   Minimal yapı sayesinde projeyi istediğiniz gibi özelleştirebilirsiniz.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-Emirkan Ülker :)
+##  Başlamak için İpuçları
+
+`src/` klasöründe componentlerinizi oluşturabilirsiniz. 
+`App.jsx` dosyası projenin başlangıç noktasıdır.
+ Tailwind veya MUI gibi kütüphaneleri entegre edebilirsiniz.
+
+---
+
