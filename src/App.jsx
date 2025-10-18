@@ -16,7 +16,7 @@ function App() {
     <LanguageProvider>
       <DarkModeProvider>
         <div className="app-general-div">
-          <div><Header />ssssssssssssss</div>
+          <div><Header /></div>
           <div><Skills /></div>
           <div><Profile /></div>
           <div><Projects /></div>
