@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Typography, Link } from '@mui/material';
 import Avatar from '@mui/material/Avatar';
 import workintech from "../images/wrkntch.png";
@@ -8,9 +8,26 @@ import pizzaUyg from "../images/pizzaUyg.png";
 import { LanguageContext } from "../context/LanguageContext";
 import { useContext } from "react";
 import { DarkModeContext } from "./DarkModeContext";
+import { fakeUser } from "../assets/data.js";
+import axios from 'axios';
 
 
 function Projects() {
+
+
+    useEffect(() => {
+        const sendData = async () => {
+            try {
+                const response = await axios.post("https://reqres.in/api/workintech", fakeUser);
+                console.log("API'ye veri gönderildi:", response.data);
+            } catch (err) {
+                console.log("API Hata Mesajı:", err.message);
+            }
+        };
+        sendData();
+    }, [])
+
+
     const { translations } = useContext(LanguageContext);
     const { darkMode } = useContext(DarkModeContext);
 
