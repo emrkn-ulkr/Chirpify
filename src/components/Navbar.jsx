@@ -8,7 +8,7 @@ import ProfileImages from "../images/profile.jpg"
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { LanguageContext } from "../context/LanguageContext";
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { DarkModeContext } from "./DarkModeContext";
 
 
@@ -60,9 +60,6 @@ const YellowBlueSwitch = styled(Switch)(({ theme }) => ({
 function Navbar() {
   const { translations, toggleLanguage } = useContext(LanguageContext);
   const { darkMode, setDarkMode } = useContext(DarkModeContext);
-  useEffect(() => {
-    document.body.style.backgroundColor = darkMode ? "#252128" : "#FFFFFF";
-  }, [darkMode]);
 
   const fontHeaderModeC = darkMode ? "#d9d9d9" : "#000000";
   const turkceyeGecC = darkMode ? "#bab2e6" : "#4731d3";

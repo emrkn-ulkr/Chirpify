@@ -11,10 +11,7 @@ export const DarkModeProvider = ({ children }) => {
 
     const [darkMode, setDarkMode] = useLocalStorage("site-theme", false);
 
-
-
     useEffect(() => {
-
         document.body.style.backgroundColor = darkMode ? "#252128" : "#FFFFFF";
     }, [darkMode]);
 
