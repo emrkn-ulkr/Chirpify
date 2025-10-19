@@ -179,7 +179,7 @@ function Projects() {
 
                     <footer style={{ display: "flex", justifyContent: "space-between" }}>
                         <Link
-                            href="https://github.com/emrkn-ulkr"
+                            href="https://github.com/emrkn-ulkr/emrkn-ulkr.github.io"
                             target="_blank"
                             underline="always"  // alt çizgi
                             sx={{
