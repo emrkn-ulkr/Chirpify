@@ -268,7 +268,7 @@ function Projects() {
                             Github
                         </Link>
                         <Link
-                            href="https://github.com/emrkn-ulkr/fsweb-s8-challenge-pizza"
+                            href="https://fsweb-s8-challenge-pizza-git-main-emirkans-projects.vercel.app"
                             target="_blank"
                             underline="always" // alt çizgi
                             sx={{
