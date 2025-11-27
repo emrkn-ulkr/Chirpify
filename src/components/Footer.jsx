@@ -26,7 +26,7 @@ function Footer() {
                 <div style={{ marginLeft: "350px" }}>
                     <span>&#128073;</span>
                     <Link
-                        href='mailto:emirkanulker08@gmail.com'
+                        href='mailto:officialemirkan@gmail.com'
                         target="_blank"
                         title='E-posta'
                         underline="always" // alt çizgi
@@ -37,7 +37,7 @@ function Footer() {
                             transition: 'color 0.3s' // hover olunca mor renk
                         }}
                     >
-                        emirkanulker08@gmail.com
+                        officialemirkan@gmail.com
                     </Link>
                 </div>
 
