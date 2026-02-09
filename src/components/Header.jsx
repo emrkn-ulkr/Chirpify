@@ -4,7 +4,7 @@ import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
 import Button from '@mui/material/Button';
 import Avatar from '@mui/material/Avatar';
-import ProfileImages from "../images/profile.jpg"
+import ProfileImages from "../images/me.jpeg"
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { LanguageContext } from "../context/LanguageContext";
@@ -89,8 +89,8 @@ function Header() {
               }} onClick={(e) => {
                 e.preventDefault(); toggleLanguage();
               }}
-            >{translations.toggleLanguage}</a> 
-            </Typography>
+            >{translations.toggleLanguage}</a>
+          </Typography>
         </Stack>
       </header>
       <br />

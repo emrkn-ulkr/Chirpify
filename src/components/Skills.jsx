@@ -39,8 +39,8 @@ function Skills() {
                 </div>
 
                 <div style={{ width: "300px" }}>
-                    <Typography variant='h5' sx={{ color: progNameColorC, paddingRight: "220px" }}>Node.Js</Typography>
-                    <Typography fontSize={10} sx={{ color: progWriteC }}>{translations.nodeJs}
+                    <Typography variant='h5' sx={{ color: progNameColorC, paddingRight: "220px" }}>Java</Typography>
+                    <Typography fontSize={10} sx={{ color: progWriteC }}>{translations.Java}
                     </Typography>
                 </div>
 

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Typography, Link } from '@mui/material';
 import Avatar from '@mui/material/Avatar';
-import workintech from "../images/wrkntch.png";
+import workintech from "../images/cv.png";
 import Button from '@mui/material/Button';
 import yaziRengiBulmaOyunu from "../images/yaziRengi.png";
 import pizzaUyg from "../images/pizzaUyg.png";
@@ -58,7 +58,7 @@ function Projects() {
                             height: 180,         // yükseklik // kareye yakın görünüm
                             borderRadius: 0
                         }} />
-                    <Typography variant='h5' sx={{ color: navInfoC }}>Workintech</Typography>
+                    <Typography variant='h5' sx={{ color: navInfoC }}>CV Sayfam</Typography>
                     <br />
                     <Typography fontSize={10} sx={{ color: projectsWriteC }}>{translations.project_1}
                     </Typography>
