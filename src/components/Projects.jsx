@@ -111,7 +111,7 @@ function Projects() {
                             Github
                         </Link>
                         <Link
-                            href="https://www.workintech.com.tr/"
+                            href="chirpify-two.vercel.app"
                             target="_blank"
                             underline="always" // alt çizgi
                             sx={{
