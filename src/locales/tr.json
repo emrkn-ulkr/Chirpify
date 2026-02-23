@@ -20,7 +20,7 @@
     "preferredRoleAnsw": "Full-Stack Developer",
     "profileAboutMe": "Hakkımda",
     "profileAboutMeAnsw": "Java, Spring Boot ve React teknolojilerinde uzmanlasmis bir Full-Stack Developer olarak olceklenebilir backend servisleri ve modern web uygulamalari gelistiriyorum. OOP, veri yapilari ve temiz mimari prensipleri ile surdurulebilir, test edilebilir ve bakimi kolay cozumler uretmeyi onceliklendiriyorum. REST API, Spring Data JPA ve responsive React arayuzleri ile gercek dunya projelerinde aktif rol aldim.",
-    "project_1": "Vanilla JavaScript ile gelistirdigim kisisel CV web sitemde dinamik icerik yonetimi, responsive tasarim, performans odakli dagitim (Vercel) ve temel SEO/erisilebilirlik optimizasyonlari uyguladim.",
+    "project_1": "Vanilla JavaScript ile gelistirdigim kisisel CV web sitemde dinamik icerik yonetimi, responsive tasarim, performans odakli dagitim ve temel SEO/erisilebilirlik optimizasyonlari uyguladim.",
     "project_2": "Tarayici tabanli mini oyunu saf HTML ve CSS ile gelistirdim. Flexbox/Grid ile oyun alani tasarladim, manuel stil yonetimiyle responsive yapi kurdum ve GitHub Pages ile deploy ettim.",
     "project_3": "React pratik projesi olarak pizza siparis uygulamasi gelistirdim. State yonetimi, props akisi, form validasyonu ve dinamik fiyat hesaplama mantigini aktif kullandim.",
     "viewSite": "Siteyi Gör",
