@@ -1,5 +1,5 @@
 import React from 'react'
-import { Typography } from '@mui/material'
+import { Typography, Link } from '@mui/material'
 import { LanguageContext } from "../context/LanguageContext";
 import { useContext } from "react";
 import { DarkModeContext } from "../context/DarkModeContext";
@@ -19,13 +19,20 @@ function Profile() {
 
     const certifications = [
         { title: translations.cert1Title, issuer: translations.cert1Issuer, date: translations.cert1Date, id: translations.cert1Id, skills: translations.cert1Skills },
-        { title: translations.cert2Title, issuer: translations.cert2Issuer, date: translations.cert2Date, id: translations.cert2Id },
-        { title: translations.cert3Title, issuer: translations.cert3Issuer, date: translations.cert3Date, id: translations.cert3Id },
+        { title: translations.cert2Title, issuer: translations.cert2Issuer, date: translations.cert2Date, id: translations.cert2Id, skills: translations.cert2Skills },
+        { title: translations.cert3Title, issuer: translations.cert3Issuer, date: translations.cert3Date, id: translations.cert3Id, skills: translations.cert3Skills },
         { title: translations.cert4Title, issuer: translations.cert4Issuer, date: translations.cert4Date, id: translations.cert4Id, skills: translations.cert4Skills },
-        { title: translations.cert5Title, issuer: translations.cert5Issuer, date: translations.cert5Date, id: translations.cert5Id, skills: translations.cert5Skills },
-        { title: translations.cert6Title, issuer: translations.cert6Issuer, date: translations.cert6Date, id: translations.cert6Id, skills: translations.cert6Skills },
-    ];
+    ].filter((cert) => cert.title && cert.issuer);
 
+    const cvProjectHighlights = translations.cvProjectHighlightsList
+        ? translations.cvProjectHighlightsList.split(" | ").filter(Boolean)
+        : [];
+    const personalProjects = translations.personalProjectsList
+        ? translations.personalProjectsList.split(" | ").filter(Boolean)
+        : [];
+    const projectFeatures = translations.projectFeaturesList
+        ? translations.projectFeaturesList.split(" | ").filter(Boolean)
+        : [];
 
     return (
         <section>
@@ -38,30 +45,33 @@ function Profile() {
             <br />
 
             <section>
-                <div style={{ display: "flex" }}>
-                    <Typography variant='h5' sx={{ color: navInfoC }}>{translations.profile}</Typography>
-
-                </div>
+                <Typography variant='h5' sx={{ color: navInfoC }}>{translations.profile}</Typography>
                 <br />
-                <article style={{ display: "flex", justifyContent: "space-between" }}>
+                <article className="profile-intro-grid">
 
-                    <div style={{ color: personalWriteC, display: "flex", flexDirection: "column", gap: "10px" }}>
+                    <div className="profile-block" style={{ color: personalWriteC }}>
                         <Typography sx={{ fontWeight: "bold" }}>{translations.dateOfBirth}</Typography>
                         <Typography sx={{ fontWeight: "bold" }}>{translations.cityOfResidence}</Typography>
-                        <Typography sx={{ fontWeight: "bold" }}>{translations.educationLevel}</Typography><br />
+                        <Typography sx={{ fontWeight: "bold" }}>{translations.educationLevel}</Typography>
                         <Typography sx={{ fontWeight: "bold" }}>{translations.preferredRole}</Typography>
+                        <Typography sx={{ fontWeight: "bold" }}>{translations.phoneLabel}</Typography>
+                        <Typography sx={{ fontWeight: "bold" }}>{translations.addressLabel}</Typography>
                     </div>
 
-                    <div style={{ color: personalWriteC, display: "flex", flexDirection: "column", gap: "10px", marginRight: "50px", width: "250px" }}>
+                    <div className="profile-block" style={{ color: personalWriteC }}>
                         <Typography>{translations.dateOfBirthAnsw}</Typography>
                         <Typography>{translations.cityOfResidenceAnsw}</Typography>
                         <Typography>{translations.educationLevelAnsw}</Typography>
-                        <Typography sx={{ marginTop: "10px" }}>{translations.preferredRoleAnsw}</Typography>
+                        <Typography>{translations.preferredRoleAnsw}</Typography>
+                        <Typography>{translations.phoneValue}</Typography>
+                        <Typography>{translations.addressValue}</Typography>
                     </div>
 
-                    <div style={{ color: personalWriteC, marginRight: "20px", marginTop: "-70px", width: "605px" }}>
+                    <div className="profile-about" style={{ color: personalWriteC }}>
                         <Typography variant='h5' sx={{ color: navInfoC }}>{translations.profileAboutMe}</Typography><br />
-                        {translations.profileAboutMeAnsw}
+                        <Typography sx={{ color: personalWriteC }}>
+                            {translations.profileAboutMeAnsw}
+                        </Typography>
                     </div>
 
                 </article>
@@ -71,7 +81,6 @@ function Profile() {
                 <br />
                 <br />
 
-                {/* ── Deneyim / Experience ── */}
                 <div>
                     <Typography variant='h5' sx={{ color: navInfoC }}>{translations.experience}</Typography>
                     <br />
@@ -86,7 +95,6 @@ function Profile() {
                 <br />
                 <br />
 
-                {/* ── Eğitim / Education ── */}
                 <div>
                     <Typography variant='h5' sx={{ color: navInfoC }}>{translations.education}</Typography>
                     <br />
@@ -102,7 +110,18 @@ function Profile() {
                 <br />
                 <br />
 
-                {/* ── Sertifikalar / Certifications ── */}
+                <div>
+                    <Typography variant='h5' sx={{ color: navInfoC }}>{translations.languages}</Typography>
+                    <br />
+                    <Typography sx={{ color: personalWriteC }}>
+                        {translations.languageList}
+                    </Typography>
+                </div>
+                <br />
+                <hr style={{ border: "1px solid gray" }} />
+                <br />
+                <br />
+
                 <div>
                     <Typography variant='h5' sx={{ color: navInfoC }}>{translations.certifications}</Typography>
                     <br />
@@ -116,7 +135,7 @@ function Profile() {
                                 backgroundColor: certBgC
                             }}>
                                 <Typography sx={{ fontWeight: "bold", fontSize: "1.05rem" }}>{cert.title}</Typography>
-                                <Typography sx={{ color: tagTextC }}>{cert.issuer}  •  {cert.date}</Typography>
+                                <Typography sx={{ color: tagTextC }}>{cert.issuer}  -  {cert.date}</Typography>
                                 <Typography sx={{ fontSize: "0.8rem", marginTop: "4px" }}>
                                     {translations.credIdLabel}: {cert.id}
                                 </Typography>
@@ -143,7 +162,41 @@ function Profile() {
                 <br />
                 <br />
 
-                {/* ── Yetenekler / All Skills (Tags) ── */}
+                <div>
+                    <Typography variant='h5' sx={{ color: navInfoC }}>{translations.cvProjectHighlightsTitle}</Typography>
+                    <br />
+                    <ul style={{ color: personalWriteC, margin: 0, paddingLeft: "18px", display: "grid", gap: "8px" }}>
+                        {cvProjectHighlights.map((item, i) => (
+                            <li key={i}>{item}</li>
+                        ))}
+                    </ul>
+                </div>
+                <br />
+                <hr style={{ border: "1px solid gray" }} />
+                <br />
+                <br />
+
+                <div>
+                    <Typography variant='h5' sx={{ color: navInfoC }}>{translations.youtubeTitle}</Typography>
+                    <br />
+                    <Typography sx={{ color: personalWriteC }}>
+                        {translations.youtubeDesc}
+                    </Typography>
+                    <Link
+                        href={translations.youtubeUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        underline="always"
+                        sx={{ color: tagTextC, fontWeight: "bold" }}
+                    >
+                        {translations.youtubeUrl}
+                    </Link>
+                </div>
+                <br />
+                <hr style={{ border: "1px solid gray" }} />
+                <br />
+                <br />
+
                 <div>
                     <Typography variant='h5' sx={{ color: navInfoC }}>{translations.allSkills}</Typography>
                     <br />
@@ -165,7 +218,6 @@ function Profile() {
                 <br />
                 <br />
 
-                {/* ── Sektör Bilgisi / Industry Knowledge ── */}
                 <div>
                     <Typography variant='h5' sx={{ color: navInfoC }}>{translations.industryKnowledge}</Typography>
                     <br />
@@ -188,6 +240,31 @@ function Profile() {
                 <br />
                 <br />
 
+                <div>
+                    <Typography variant='h5' sx={{ color: navInfoC }}>{translations.personalProjectsTitle}</Typography>
+                    <br />
+                    <ul style={{ color: personalWriteC, margin: 0, paddingLeft: "18px", display: "grid", gap: "8px" }}>
+                        {personalProjects.map((item, i) => (
+                            <li key={i}>{item}</li>
+                        ))}
+                    </ul>
+                </div>
+                <br />
+                <br />
+                <div>
+                    <Typography variant='h5' sx={{ color: navInfoC }}>{translations.projectFeaturesTitle}</Typography>
+                    <br />
+                    <ul style={{ color: personalWriteC, margin: 0, paddingLeft: "18px", display: "grid", gap: "8px" }}>
+                        {projectFeatures.map((item, i) => (
+                            <li key={i}>{item}</li>
+                        ))}
+                    </ul>
+                </div>
+                <br />
+                <br />
+                <hr style={{ border: "1px solid gray" }} />
+                <br />
+                <br />
             </section>
 
         </section >
@@ -195,4 +272,3 @@ function Profile() {
 }
 
 export default Profile
-

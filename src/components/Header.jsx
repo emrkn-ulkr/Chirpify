@@ -5,8 +5,7 @@ import Stack from "@mui/material/Stack";
 import Button from '@mui/material/Button';
 import Avatar from '@mui/material/Avatar';
 import ProfileImages from "../images/me.jpeg"
-import { FaGithub } from "react-icons/fa";
-import { FaLinkedinIn } from "react-icons/fa";
+import { FaGithub, FaLinkedinIn, FaYoutube } from "react-icons/fa";
 import { LanguageContext } from "../context/LanguageContext";
 import { useContext } from "react";
 import { DarkModeContext } from "../context/DarkModeContext";
@@ -69,18 +68,27 @@ function Header() {
   const headerWritePrgC = darkMode ? "#e4e3e4" : "#6b7280";
   const headerFooterHireC = darkMode ? "#e1e1ff" : "#3730a3";
   const headerFooterGithubC = darkMode ? "#383838" : "#ffffff";
+  const youtubeShadowC = darkMode
+    ? "0 10px 22px rgba(255, 0, 0, 0.35)"
+    : "0 10px 20px rgba(255, 0, 0, 0.25)";
+  const topNavButtonSx = {
+    color: "gray",
+    textTransform: "none",
+    height: "50px",
+    width: { xs: "100%", sm: "120px" }
+  };
 
   return (
 
     <section> { /* Ana Bölüm */}
 
       <header className="header-header">
-        <Stack direction="row" spacing={1} alignItems="center">
+        <Stack direction={{ xs: "column", sm: "row" }} spacing={1} alignItems={{ xs: "flex-start", sm: "center" }}>
           <YellowBlueSwitch
             checked={darkMode}
             onChange={() => setDarkMode(!darkMode)} />
           <Typography
-            sx={{ color: fontHeaderModeC }}>
+            sx={{ color: fontHeaderModeC, display: "flex", alignItems: "center", flexWrap: "wrap", gap: "4px", fontSize: { xs: "0.8rem", sm: "1rem" } }}>
             {darkMode ? "LIGHT MODE" : "DARK MODE"} |
             <a href="#"
               style={{
@@ -93,35 +101,21 @@ function Header() {
           </Typography>
         </Stack>
       </header>
-      <br />
 
       <nav className="header-bar-div">
         <Avatar sx={{ backgroundColor: "#ede7f6", color: "#9575cd", transform: "rotate(30deg)", width: "45px", height: "45px" }}>
           E
         </Avatar>
-        <br />
-        <br />
-        <br />
 
         <div className="header-bar-right">
           <Button component="a"
             href="https://github.com/emrkn-ulkr"
-            sx={{
-              color: "gray",
-              textTransform: "none",
-              height: "50px",
-              width: "120px"
-            }} variant="text" >{translations.skills}</Button>
+            sx={topNavButtonSx} variant="text" >{translations.skills}</Button>
 
           <Button
             component="a"
             href="https://github.com/emrkn-ulkr"
-            sx={{
-              color: "gray",
-              textTransform: "none",
-              height: "50px",
-              width: "120px"
-            }} variant="text" >{translations.projects}</Button>
+            sx={topNavButtonSx} variant="text" >{translations.projects}</Button>
 
           <Button
             component="a"
@@ -134,7 +128,7 @@ function Header() {
               borderColor: "#3730a3", // çerçeve rengi
               textTransform: "none",
               height: "50px",
-              width: "120px"  // büyük harfi kaldırmak için
+              width: { xs: "100%", sm: "120px" }  // büyük harfi kaldırmak için
             }}
           >{translations.hireMe}</Button>
         </div>
@@ -148,11 +142,10 @@ function Header() {
 
             <hr style={{ width: "100px", marginTop: "15px", marginRight: "10px", color: nameColorC }} />
             <h5 style={{ color: nameColorC }}>Emirkan Ülker</h5>
-            <br />
           </div>
 
 
-          <Typography variant="h2" sx={{ fontSize: "2.5rem", fontWeight: "bold", color: headerWriteC, mt: 1 }}>
+          <Typography variant="h2" sx={{ fontSize: { xs: "1.9rem", sm: "2.2rem", md: "2.5rem" }, fontWeight: "bold", color: headerWriteC, mt: 1, whiteSpace: "pre-line" }}>
             {translations.welcomeTitle}
           </Typography>
           <br />
@@ -160,7 +153,7 @@ function Header() {
             {translations.welcomeDesc}
           </Typography>
           <br />
-          <nav style={{ display: "flex", gap: "10px" }}>
+          <nav className="header-social-nav">
             <Button
               component="a"
               href="mailto:emirkanulker08@gmail.com"
@@ -168,7 +161,7 @@ function Header() {
               sx={{
                 textTransform: "none ",
                 backgroundColor: headerFooterHireC,
-                width: "115px",
+                width: { xs: "100%", sm: "115px" },
                 color: darkMode ? "#000000" : "#e6e5f3"
               }}
               variant="contained">
@@ -182,7 +175,7 @@ function Header() {
               sx={{
                 color: darkMode ? "#e1e1ff" : "#3730a3",       // yazı rengi // çerçeve rengi
                 textTransform: "none",
-                width: "115px",
+                width: { xs: "100%", sm: "115px" },
                 gap: "5px",
                 backgroundColor: headerFooterGithubC,
                 borderColor: darkMode ? "#b7b7cd" : "#3730a3"
@@ -194,11 +187,11 @@ function Header() {
 
             <Button
               component="a"
-              href="https://www.linkedin.com/in/emirkan-%C3%BClker-dev/"
+              href="www.linkedin.com/in/emirkan-ulker-dev"
               target="_blank"
               variant="outlined"
               sx={{
-                width: "115px",
+                width: { xs: "100%", sm: "115px" },
                 color: darkMode ? "#e1e1ff" : "#3730a3",
                 borderColor: darkMode ? "#b7b7cd" : "#3730a3",
                 textTransform: "none",
@@ -217,6 +210,38 @@ function Header() {
               Linkedin
             </Button>
 
+            <Button
+              component="a"
+              href="https://www.youtube.com/@emir-devw"
+              target="_blank"
+              rel="noopener noreferrer"
+              variant="contained"
+              sx={{
+                width: { xs: "100%", sm: "130px" },
+                color: "#ffffff",
+                textTransform: "none",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                gap: "6px",
+                padding: "6px 14px",
+                borderRadius: "12px",
+                background: "linear-gradient(135deg, #ff0033 0%, #ff4d4d 100%)",
+                boxShadow: youtubeShadowC,
+                transition: "transform 0.25s ease, box-shadow 0.25s ease",
+                "&:hover": {
+                  background: "linear-gradient(135deg, #d5002b 0%, #ff1f4d 100%)",
+                  transform: "translateY(-2px)",
+                  boxShadow: "0 14px 28px rgba(255, 0, 0, 0.35)"
+                }
+              }}
+            >
+              <span style={{ display: "flex", fontSize: "22px", color: "#ffffff" }}>
+                <FaYoutube />
+              </span>
+              YouTube
+            </Button>
+
           </nav>
 
         </article>
@@ -226,18 +251,17 @@ function Header() {
             alt="Emirkan Ülker"
             src={ProfileImages}
             sx={{
-              marginTop: "25px",
-              marginLeft: "200px",
-              width: 475,          // genişlik
-              height: 330,         // yükseklik
+              marginTop: { xs: "8px", md: "25px" },
+              marginLeft: 0,
+              width: { xs: "100%", sm: 380, md: 430, lg: 475 },          // genişlik
+              maxWidth: "100%",
+              height: { xs: 250, sm: 290, md: 320, lg: 330 },         // yükseklik
               borderRadius: "10%", // kareye yakın görünüm
               boxShadow: "0 4px 10px rgba(0,0,0,0.2)",
             }} />
         </div>
       </main>
 
-      <br />
-      <br />
       <br />
 
 

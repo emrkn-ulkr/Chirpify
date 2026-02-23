@@ -24,23 +24,23 @@ function Skills() {
             </Typography>
             <br />
 
-            <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <div style={{ width: "300px" }}>
+            <div className="skills-list">
+                <div className="skills-item">
                     <Typography variant='h5' sx={{ color: progNameColorC }}>Java Script</Typography>
-                    <Typography fontSize={10} sx={{ color: progWriteC }}>{translations.javaScript}
+                    <Typography fontSize={{ xs: 12, md: 10 }} sx={{ color: progWriteC }}>{translations.javaScript}
                     </Typography>
                 </div>
 
-                <div style={{ width: "300px" }}>
-                    <Typography variant='h5' sx={{ color: progNameColorC, paddingRight: "30px" }}>React.Js</Typography>
-                    <Typography fontSize={10} sx={{ color: progWriteC }}>{translations.reactJs}
+                <div className="skills-item">
+                    <Typography variant='h5' sx={{ color: progNameColorC }}>React.Js</Typography>
+                    <Typography fontSize={{ xs: 12, md: 10 }} sx={{ color: progWriteC }}>{translations.reactJs}
                     </Typography>
 
                 </div>
 
-                <div style={{ width: "300px" }}>
-                    <Typography variant='h5' sx={{ color: progNameColorC, paddingRight: "220px" }}>Java</Typography>
-                    <Typography fontSize={10} sx={{ color: progWriteC }}>{translations.Java}
+                <div className="skills-item">
+                    <Typography variant='h5' sx={{ color: progNameColorC }}>Java</Typography>
+                    <Typography fontSize={{ xs: 12, md: 10 }} sx={{ color: progWriteC }}>{translations.Java}
                     </Typography>
                 </div>
 

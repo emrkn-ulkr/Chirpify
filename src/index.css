@@ -1,30 +1,232 @@
 @import "tailwindcss";
 
+* {
+    box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+    width: 100%;
+}
+
+body {
+    margin: 0;
+}
+
 .app-general-div {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    padding-right: 350px;
-    padding-left: 350px;
-    padding-top: 50px;
+    width: min(1240px, 100%);
+    margin: 0 auto;
+    padding-right: clamp(16px, 5vw, 72px);
+    padding-left: clamp(16px, 5vw, 72px);
+    padding-top: clamp(24px, 4vw, 50px);
 }
 
 .header-header {
-    float: right;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .header-bar-div {
     display: flex;
     justify-content: space-between;
-    gap: 250px;
+    align-items: center;
+    gap: clamp(12px, 3vw, 36px);
     margin-top: 20px;
+    flex-wrap: wrap;
 }
 
 .header-bar-right {
     display: flex;
-    gap: 25px;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
 .header-hero-general {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: clamp(20px, 5vw, 56px);
+    flex-wrap: wrap;
+}
+
+.header-hero-left {
+    flex: 1 1 380px;
+    min-width: 0;
+}
+
+.header-hero-right {
+    flex: 1 1 320px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header-social-nav {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.skills-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.skills-item {
+    flex: 1 1 220px;
+    max-width: 320px;
+    min-width: 0;
+}
+
+.profile-intro-grid {
+    display: grid;
+    grid-template-columns: minmax(130px, 190px) minmax(160px, 260px) 1fr;
+    gap: 24px;
+    align-items: start;
+}
+
+.profile-block {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 0;
+}
+
+.profile-about {
+    min-width: 0;
+}
+
+.projects-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 280px;
+    max-width: 360px;
+    min-width: 260px;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.project-links {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.footer-inner {
+    width: min(1240px, 100%);
+    margin: 0 auto;
+    padding: clamp(20px, 4vw, 36px) clamp(16px, 5vw, 72px) 28px;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-links {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 1024px) {
+    .app-general-div {
+        padding-right: clamp(14px, 4vw, 36px);
+        padding-left: clamp(14px, 4vw, 36px);
+    }
+
+    .header-hero-right {
+        justify-content: center;
+    }
+
+    .project-card {
+        max-width: calc(50% - 12px);
+        min-width: 280px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-header {
+        justify-content: flex-start;
+    }
+
+    .header-bar-div {
+        align-items: flex-start;
+    }
+
+    .header-bar-right {
+        justify-content: flex-start;
+    }
+
+    .header-hero-general {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-hero-right {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .header-social-nav>* {
+        flex: 1 1 140px;
+    }
+
+    .skills-item {
+        flex: 1 1 100%;
+        max-width: none;
+    }
+
+    .profile-intro-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .project-card {
+        max-width: 100%;
+        min-width: 100%;
+    }
+
+    .footer-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .app-general-div {
+        padding-right: 12px;
+        padding-left: 12px;
+        padding-top: 18px;
+    }
+
+    .header-social-nav>* {
+        flex: 1 1 100%;
+    }
+
+    .header-bar-right>* {
+        flex: 1 1 100%;
+    }
 }

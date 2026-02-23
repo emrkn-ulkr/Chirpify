@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Typography, Link } from '@mui/material';
 import Avatar from '@mui/material/Avatar';
 import workintech from "../images/cv.png";
@@ -8,24 +8,9 @@ import pizzaUyg from "../images/pizzaUyg.png";
 import { LanguageContext } from "../context/LanguageContext";
 import { useContext } from "react";
 import { DarkModeContext } from "../context/DarkModeContext";
-import { fakeUser } from "../assets/data.js";
-import axios from 'axios';
 
 
 function Projects() {
-
-
-    useEffect(() => {
-        const sendData = async () => {
-            try {
-                const response = await axios.post("https://reqres.in/api/workintech", fakeUser);
-                console.log("API'ye veri gönderildi:", response.data);
-            } catch (err) {
-                console.log("API Hata Mesajı:", err.message);
-            }
-        };
-        sendData();
-    }, [])
 
 
     const { translations } = useContext(LanguageContext);
@@ -47,23 +32,23 @@ function Projects() {
             </header>
 
             <br />
-            <section style={{ display: "flex", justifyContent: "space-between", gap: "100px" }}> {/* İç bölümler */}
+            <section className="projects-grid"> {/* İç bölümler */}
 
-                <article style={{ display: "flex", flexDirection: "column", width: "280px" }}>  {/* 1. Kart  */}
+                <article className="project-card">  {/* 1. Kart  */}
                     <Avatar
                         alt="Emirkan Ülker"
                         src={workintech}
                         sx={{
-                            width: 280,          // genişlik
-                            height: 180,         // yükseklik // kareye yakın görünüm
+                            width: "100%",          // genişlik
+                            height: { xs: 200, sm: 180 },         // yükseklik // kareye yakın görünüm
                             borderRadius: 0
                         }} />
                     <Typography variant='h5' sx={{ color: navInfoC }}>CV Sayfam</Typography>
                     <br />
-                    <Typography fontSize={10} sx={{ color: projectsWriteC }}>{translations.project_1}
+                    <Typography fontSize={{ xs: 12, md: 10 }} sx={{ color: projectsWriteC }}>{translations.project_1}
                     </Typography>
 
-                    <nav style={{ display: "flex", gap: "5px", marginTop: "15px" }}>
+                    <nav className="project-tags">
                         <Button
                             variant="outlined"
                             sx={{
@@ -98,7 +83,7 @@ function Projects() {
                         >axios</Button>
                     </nav>
 
-                    <footer style={{ display: "flex", justifyContent: "space-between" }}>
+                    <footer className="project-links">
                         <Link
                             href="https://github.com/emrkn-ulkr"
                             target="_blank"
@@ -111,7 +96,7 @@ function Projects() {
                             Github
                         </Link>
                         <Link
-                            href="chirpify-two.vercel.app"
+                            href="https://chirpify-two.vercel.app"
                             target="_blank"
                             underline="always" // alt çizgi
                             sx={{
@@ -128,21 +113,21 @@ function Projects() {
 
                 </article>
 
-                <article style={{ display: "flex", flexDirection: "column", width: "280px" }}> {/*  2. Kart */}
+                <article className="project-card"> {/*  2. Kart */}
                     <Avatar
                         alt="Emirkan Ülker"
                         src={yaziRengiBulmaOyunu}
                         sx={{
-                            width: 280,
-                            height: 180,
+                            width: "100%",
+                            height: { xs: 200, sm: 180 },
                             borderRadius: 0
                         }} />
                     <Typography variant='h5' sx={{ color: navInfoC }}>Yazı Rengini Bulma</Typography>
                     <br />
-                    <Typography fontSize={10} sx={{ color: projectsWriteC }}>{translations.project_2}
+                    <Typography fontSize={{ xs: 12, md: 10 }} sx={{ color: projectsWriteC }}>{translations.project_2}
                     </Typography>
 
-                    <nav style={{ display: "flex", gap: "5px", marginTop: "15px" }}>
+                    <nav className="project-tags">
                         <Button
                             variant="outlined"
                             sx={{
@@ -177,7 +162,7 @@ function Projects() {
                         >axios</Button>
                     </nav>
 
-                    <footer style={{ display: "flex", justifyContent: "space-between" }}>
+                    <footer className="project-links">
                         <Link
                             href="https://github.com/emrkn-ulkr/emrkn-ulkr.github.io"
                             target="_blank"
@@ -207,20 +192,20 @@ function Projects() {
                     </footer>
                 </article>
 
-                <article style={{ display: "flex", flexDirection: "column", width: "280px" }}> {/* 3. Kart */}
+                <article className="project-card"> {/* 3. Kart */}
                     <Avatar
                         alt="Emirkan Ülker"
                         src={pizzaUyg}
                         sx={{
-                            width: 280,
-                            height: 180,
+                            width: "100%",
+                            height: { xs: 200, sm: 180 },
                             borderRadius: 0
                         }} />
                     <Typography variant='h5' sx={{ color: navInfoC }}>Web Pizza</Typography>
                     <br />
-                    <Typography fontSize={10} sx={{ color: projectsWriteC }}>{translations.project_3}
+                    <Typography fontSize={{ xs: 12, md: 10 }} sx={{ color: projectsWriteC }}>{translations.project_3}
                     </Typography>
-                    <nav style={{ display: "flex", gap: "5px", marginTop: "15px" }}>
+                    <nav className="project-tags">
                         <Button
                             variant="outlined"
                             sx={{
@@ -255,7 +240,7 @@ function Projects() {
                         >axios</Button>
                     </nav>
 
-                    <footer style={{ display: "flex", justifyContent: "space-between" }}>
+                    <footer className="project-links">
                         <Link
                             href="https://github.com/emrkn-ulkr"
                             target="_blank"
