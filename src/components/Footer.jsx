@@ -68,7 +68,7 @@ function Footer() {
                         Github
                     </Link>
                     <Link
-                        href="https://www.linkedin.com/in/emirkan-%C3%BClker-dev/"
+                        href="www.linkedin.com/in/emirkan-ulker-dev"
                         target="_blank"
                         title="Linkedin"
                         underline="always"
